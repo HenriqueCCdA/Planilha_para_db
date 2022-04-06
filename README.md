@@ -1,10 +1,11 @@
-# Repositorio que copia dados de um excel para um banco de dados.
+# Copia dados de um excel para um banco de dados.
 
-Para facilizar o processo vou utlizar o django para cria a tabela atraves da migrações. Para isso basta fazer as migrações com
-
+Para facilizar o processo vou utlizar **ORM** do **django**.
 
 ```console
-python manage.py makemigrations
+python -m venv .venv --upgrade-deps
+source .venv/bin/activate
+pip install -r requirements.txt
 python manage.py migrate
 ```
 
@@ -18,3 +19,5 @@ Para transferir os dados do excel para o db.sqlite3:
 ```console
 python excel_para_banco.py
 ```
+
+Agora os dados foram transferidos da **Planilha.xlsx** para a tabela **core_tabela** do sqlite3.
