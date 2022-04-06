@@ -1,9 +1,11 @@
-# Repositorio que copia dados de um excel para um banco de dados.
+# Copia dados de um excel para um banco de dados.
 
-Para facilizar o processo vou utlizar o django para cria a tabela atraves da migrações. Para isso basta fazer as migrações com
-
+Para facilizar o processo vou utlizar **ORM** do **django**. 
 
 ```console
+python -m venv .venv --upgrade-deps
+source .venv/bin/activate
+pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 ```
